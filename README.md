@@ -10,6 +10,6 @@ Selesaikan langkah-langkah praktikum berikut ini menggunakan editor Visual Studi
 
 ## Soal 1
 Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
-![Screenshoot books](images/titlejejen.png.png)
-![Screenshoot books](images/soal2.png.png)
-![Screenshoot books](images/jawabansoal2.png.png)
+![Screenshoot books](images/titlejejen.png)
+![Screenshoot books](images/soal2.png)
+![Screenshoot books](images/jawabansoal2.png)
