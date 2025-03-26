@@ -2,15 +2,14 @@
 
 A new Flutter project.
 
+Praktikum 1: Mengunduh Data dari Web Service (API)
+Selesaikan langkah-langkah praktikum berikut ini menggunakan editor Visual Studio Code (VS Code) atau Android Studio atau code editor lain kesukaan Anda. Jawablah di laporan praktikum Anda pada setiap soal yang ada di beberapa langkah praktikum ini.
+
+
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Soal 1
+Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
+![Screenshoot books](images/titlejejen.png)
+![Screenshoot books](images/soal2.png)
+![Screenshoot books](images/jawabansoal2.png)
