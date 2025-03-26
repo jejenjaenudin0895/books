@@ -106,5 +106,5 @@ catchError adalah metode yang digunakan untuk menangani error atau pengecualian 
 
 
 *Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 4"*
-![Screenshoot books](images/jawabansoal4langkah2.png)
+![Screenshoot books](images/jawabansoal4.png)
 
