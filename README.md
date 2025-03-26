@@ -166,3 +166,10 @@ Dengan menggunakan Completer, kita mendapatkan kontrol penuh atas kapan Future d
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 5".
 
 ![Screenshoot books](images/jawabansoal5.png)
+
+Soal 6
+Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 6".
+
+![Screenshoot books](images/jawabansoal6.png)
+
