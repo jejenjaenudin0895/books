@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,8 +71,16 @@ class _FuturePageState extends State<FuturePage> {
                 });
 
 
+
+              count(); //kode praktek ke 2
+
               */
-              count();
+                getNumber().then((value) {
+                  setState(() {
+                    result = value.toString();
+                  });
+                });
+
               },
             ),
             const Spacer(),
@@ -126,4 +135,18 @@ Future count() async{
 
     });
 }
+
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds : 5));
+    completer.complete(42);
+  }
+
 }
