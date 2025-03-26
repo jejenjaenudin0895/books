@@ -46,10 +46,11 @@ class _FuturePageState extends State<FuturePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-                        ElevatedButton(
+            const Spacer(),
+            ElevatedButton(
               child: const Text('Go!'),
               onPressed: () {
-
+/*
                 setState(() {
                   isLoading = true; 
                   result = '';
@@ -67,13 +68,19 @@ class _FuturePageState extends State<FuturePage> {
                     isLoading = false; 
                   });
                 });
+
+
+              */
+              count();
               },
             ),
-
+            const Spacer(),
             const Spacer(),
             Text(result),
             const CircularProgressIndicator(),
             const Spacer(),
+            const Spacer(),
+
           ],
         ),
       ),
@@ -86,5 +93,37 @@ class _FuturePageState extends State<FuturePage> {
     const path = '/books/v1/volumes/Y0EgEQAAQBAJ';
     Uri url = Uri.https(authority, path);
     return http.get(url);
+
   }
+
+  Future<int> returnOneAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 1;
+  }
+
+  Future<int> returnTwoAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 2;
+  }
+
+  Future<int> returnThreeAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 3;
+  }
+
+
+
+
+Future count() async{
+
+    int total = 0;
+    total = await returnOneAsync();
+    total += await returnTwoAsync();
+    total += await returnThreeAsync();
+    setState(() {
+
+      result = total.toString();
+
+    });
+}
 }
