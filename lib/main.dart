@@ -74,12 +74,23 @@ class _FuturePageState extends State<FuturePage> {
 
               count(); //kode praktek ke 2
 
-              */
+
+              //langkah ke 3 praktekurm ke 3
                 getNumber().then((value) {
                   setState(() {
                     result = value.toString();
                   });
                 });
+
+                 */
+                getNumber().then((value) {
+                  setState(() {
+                    result = value.toString();
+                  });
+                }).catchError((e) {
+                  result = 'An error occurred';
+                });
+
 
               },
             ),
@@ -142,11 +153,16 @@ Future count() async{
     completer = Completer<int>();
     calculate();
     return completer.future;
+
   }
 
   Future calculate() async {
-    await Future.delayed(const Duration(seconds : 5));
-    completer.complete(42);
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    }
+    catch (_) {
+      completer.completeError({});
+    }
   }
-
 }
