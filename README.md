@@ -113,3 +113,56 @@ catchError adalah metode yang digunakan untuk menangani error atau pengecualian 
 
 ![Screenshoot books](images/jawabansoal4.png)
 
+## Praktikum 3: Menggunakan Completer di Future
+
+Soal 5
+Jelaskan maksud kode langkah 2 tersebut!
+
+![Screenshoot books](images/p3soal5L2.png)
+
+1. late Completer completer;
+
+    - Completer adalah sebuah objek yang digunakan untuk mengontrol Future secara manual. Dengan Completer, 
+      kita bisa mengubah status Future menjadi selesai (complete) pada saat yang kita tentukan.
+
+    - late digunakan di sini untuk menunjukkan bahwa completer akan diinisialisasi nanti. late menandakan bahwa 
+      variabel tersebut akan diberi nilai pada titik tertentu sebelum digunakan. Tanpa late, kamu harus menginisialisasi variabel pada deklarasi.
+
+    - Tipe generik Completer<int> berarti bahwa completer akan mengelola Future<int> yang akan selesai dengan 
+      sebuah nilai bertipe int.
+
+2.  Future getNumber()
+
+    - Fungsi getNumber() mengembalikan Future yang akan berakhir dengan nilai integer (Future<int>).
+        - completer = Completer<int>(); — Membuat sebuah objek Completer<int>. Ini berarti kita siap untuk    
+          mengelola sebuah Future<int>.
+          
+        - calculate(); — Memanggil fungsi calculate(), yang merupakan operasi asinkron yang akan menunda 
+          eksekusi selama 5 detik dan kemudian menyelesaikan Completer dengan nilai 42.
+
+        - return completer.future; — Mengembalikan future yang dihasilkan oleh completer. Future ini akan 
+          berisi hasil yang diberikan oleh completer.complete(42) setelah 5 detik.
+
+3. Future calculate()
+
+    - Fungsi calculate() adalah operasi asinkron yang menunda eksekusi selama 5 detik menggunakan 
+      Future.delayed().
+
+    - completer.complete(42); — Setelah 5 detik, kita menyelesaikan completer dengan nilai 42. Ini mengubah 
+      status Future yang dikendalikan oleh completer menjadi selesai (completed) dan memberikan hasilnya sebagai 42.
+
+    Sistem kerja kode tersebut ialah
+
+    1. Ketika fungsi getNumber() dipanggil, kita membuat sebuah objek Completer<int>.
+    2. Fungsi calculate() dipanggil untuk menunda eksekusi selama 5 detik.
+    3. Setelah 5 detik, completer.complete(42) dipanggil untuk memberikan nilai 42 pada Future yang 
+       dikendalikan oleh completer.
+    4. getNumber() mengembalikan future yang terkait dengan completer. Pada titik ini, future masih belum 
+       selesai dan menunggu sampai completer.complete() dipanggil setelah 5 detik.
+    5. Ketika completer.complete(42) dipanggil, future menjadi selesai dan berisi nilai 42.
+
+Dengan menggunakan Completer, kita mendapatkan kontrol penuh atas kapan Future dianggap selesai dan memberikan hasilnya. Ini berguna dalam kasus-kasus di mana kamu membutuhkan lebih banyak kontrol atas operasi asinkron, misalnya ketika mengintegrasikan logika eksternal atau perhitungan yang memakan waktu.
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 5".
+
+![Screenshoot books](images/jawabansoal5.png)
