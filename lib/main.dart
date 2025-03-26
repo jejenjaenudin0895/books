@@ -31,49 +31,45 @@ class FuturePage extends StatefulWidget {
 }
 
 class _FuturePageState extends State<FuturePage> {
-  String result = ''; // To store the result from the API
-  bool isLoading = false; // To indicate loading status
+  String result = '';
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Back From The Future JEJEN'),
+
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-            ElevatedButton(
+                        ElevatedButton(
               child: const Text('Go!'),
-              onPressed: () async {
-                // Start loading when the button is pressed
+              onPressed: () {
+
                 setState(() {
-                  isLoading = true;
+                  isLoading = true; 
+                  result = '';
                 });
 
-                try {
-                  var response = await getData();
-                  if (response.statusCode == 200) {
-                    setState(() {
-                      result = response.body;
-                      isLoading = false;
-                    });
-                  } else {
-                    setState(() {
-                      result = 'Error: ${response.statusCode}';
-                      isLoading = false;
-                    });
-                  }
-                } catch (e) {
+             
+                getData().then((value) {
                   setState(() {
-                    result = 'Error: $e';
-                    isLoading = false;
+                    result = value.body.toString().substring(0, 450); 
+                    isLoading = false; 
                   });
-                }
+                }).catchError((_) {
+                  setState(() {
+                    result = 'An error occurred'; 
+                    isLoading = false; 
+                  });
+                });
               },
             ),
+
             const Spacer(),
             Text(result),
             const CircularProgressIndicator(),

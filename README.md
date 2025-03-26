@@ -15,3 +15,9 @@ Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan A
 ![Screenshoot books](images/soal2.png)
 ## *Jawaban soal 2*
 ![Screenshoot books](images/jawabansoal2.png)
+## *Soal 3*
+Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 3".
+![Screenshoot books](images/jawabansoal3.png)
+
+
