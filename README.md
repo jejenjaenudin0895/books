@@ -171,14 +171,16 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 **Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!**
 
-Perbedaan kode pada langkah ke-2 ialah kode yang menggunakan Menggunakan Completer Tanpa completeError()
+**Perbedaan kode pada langkah ke-2**
+
+ialah kode yang menggunakan Menggunakan Completer Tanpa completeError()
 
 Kelebihan menggunakan kode ini yaitu Sederhana: Kode ini cukup sederhana dan langsung ke titik dengan hanya menyelesaikan Future tanpa perlu menangani error secara eksplisit.
 
 Dibalik kelebihan kode tersebut tentu ada kekurangannya 
 kodeini tidak ada penanganan error: Jika terjadi error di dalam calculate(), kita tidak menangani error tersebut dengan cara yang terstruktur. Hal ini bisa menyebabkan Future tidak dapat diselesaikan dengan benar jika ada masalah dalam operasi asinkron. Penanganan error harus ditangani oleh pengguna kode saat memanggil getNumber(), yang lebih terbatas.
 
-**perbedaan langkah ke 5**
+**perbedaan kode langkah ke 5**
 
 Perbedaan kode pada langkah ke-5 ialah kode yang menggunakan Completer Tanpa completeError()
 
@@ -186,7 +188,7 @@ Kelebihan menggunakan kode ini yaitu kode sederhana dan langsung ke titik dengan
 
 kekurangannya ialah Tidak ada penanganan error: Jika terjadi error di dalam calculate(), kita tidak menangani error tersebut dengan cara yang terstruktur. Hal ini bisa menyebabkan Future tidak dapat diselesaikan dengan benar jika ada masalah dalam operasi asinkron. Penanganan error harus ditangani oleh pengguna kode saat memanggil getNumber(), yang lebih terbatas.
 
-**perbedaan langkah ke 6**
+**perbedaan kode langkah ke 6**
 
 Pada langkah ke-6 ini kode yang menggunakan then() dan catchError()
 
@@ -197,4 +199,9 @@ namun ada kekurangan jika menggunakan kode ini ketika Penanganan error dilakukan
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 6".
 
 ![Screenshoot books](images/jawabansoal6.png)
+
+## **Praktikum 4: Memanggil Future secara paralel**
+
+
+
 
