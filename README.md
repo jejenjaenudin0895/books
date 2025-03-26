@@ -27,6 +27,7 @@ catchError adalah metode yang digunakan untuk menangani error atau pengecualian 
 
 ## *Soal 4*
 *Jelaskan maksud kode langkah 1 dan 2 tersebut!*
+
 *langkah 1*
 
 ![Screenshoot books](images/jawabansoal4langkah1.png)
@@ -43,68 +44,71 @@ catchError adalah metode yang digunakan untuk menangani error atau pengecualian 
 
 2. returnTwoAsync()
 
- 
-  Fungsi ini mirip dengan returnOneAsync(), hanya saja setelah menunggu selama 3 detik, ia akan mengembalikan nilai 2.
+      Fungsi ini mirip dengan returnOneAsync(), hanya saja setelah menunggu selama 3 detik, ia akan mengembalikan nilai 2.
 
   3. returnThreeAsync()
 
-  Fungsi ini juga memiliki struktur yang sama dengan dua fungsi sebelumnya, tetapi ia mengembalikan nilai 3 setelah menunggu selama 3 detik.
+     Fungsi ini juga memiliki struktur yang sama dengan dua fungsi sebelumnya, tetapi ia mengembalikan nilai 3 setelah menunggu selama 3 detik.
 
 
 *langkah 2*
+
 ![Screenshoot books](images/jawabansoal4langkah2.png)
+
 *Penjelasan:*
 
 1. Deklarasi Fungsi Asynchronous (Future count() async)
 
- - Future count() async: Fungsi ini dideklarasikan sebagai asynchronous dengan kata kunci async, yang berarti 
-  fungsi ini akan mengembalikan Future dan memungkinkan penggunaan await di dalamnya.
+   - Future count() async: Fungsi ini dideklarasikan sebagai asynchronous dengan kata kunci async, yang berarti 
+     fungsi ini akan mengembalikan Future dan memungkinkan penggunaan await di dalamnya.
 
- - Fungsi ini tidak mengembalikan nilai (void), tetapi mengembalikan Future yang menunjukkan bahwa fungsi ini 
+   - Fungsi ini tidak mengembalikan nilai (void), tetapi mengembalikan Future yang menunjukkan bahwa fungsi ini 
   bersifat asynchronous.
 
 2. Deklarasi dan Inisialisasi Variabel total
 
- - total adalah variabel bertipe integer yang digunakan untuk menyimpan hasil penjumlahan dari tiga nilai yang 
-  diambil dari fungsi asynchronous.
+   - total adalah variabel bertipe integer yang digunakan untuk menyimpan hasil penjumlahan dari tiga nilai 
+     yang diambil dari fungsi asynchronous.
 
- - total diinisialisasi dengan nilai awal 0.
+   - total diinisialisasi dengan nilai awal 0.
 
 3. Menunggu dan Mendapatkan Nilai dari returnOneAsync()
 
- - await returnOneAsync() akan menjalankan fungsi returnOneAsync() yang mengembalikan nilai 1 setelah menunggu 
-   3 detik.
+   - await returnOneAsync() akan menjalankan fungsi returnOneAsync() yang mengembalikan nilai 1 setelah 
+     menunggu 3 detik.
 
- - Karena await digunakan, eksekusi kode akan menunggu sampai fungsi returnOneAsync() selesai dan 
-   mengembalikan nilai, kemudian hasilnya (1) disimpan di dalam variabel total.
+   - Karena await digunakan, eksekusi kode akan menunggu sampai fungsi returnOneAsync() selesai dan 
+     mengembalikan nilai, kemudian hasilnya (1) disimpan di dalam variabel total.
 
 4. Menambah Nilai dari returnTwoAsync() ke total
 
- - await returnTwoAsync() akan menunggu hasil dari fungsi returnTwoAsync(), yang mengembalikan nilai 2 setelah  
-   menunggu 3 detik.
+   - await returnTwoAsync() akan menunggu hasil dari fungsi returnTwoAsync(), yang mengembalikan nilai 2 
+     setelah menunggu 3 detik.
 
- - Setelah itu, nilai total akan ditambah dengan 2. Sehingga, jika sebelumnya total bernilai 1, setelah operasi 
-   ini, total akan menjadi 3 (1 + 2).
+   - Setelah itu, nilai total akan ditambah dengan 2. Sehingga, jika sebelumnya total bernilai 1, setelah   
+     operasi ini, total akan menjadi 3 (1 + 2).
 
 5. Menambah Nilai dari returnThreeAsync() ke total
 
- - await returnThreeAsync() akan menunggu hasil dari fungsi returnThreeAsync(), yang mengembalikan nilai 3 
-   setelah menunggu 3 detik.
+   - await returnThreeAsync() akan menunggu hasil dari fungsi returnThreeAsync(), yang mengembalikan nilai 3 
+     setelah menunggu 3 detik.
 
- - Setelah itu, nilai total akan ditambah dengan 3. Jika sebelumnya total bernilai 3, maka setelah operasi ini, 
-   total akan menjadi 6 (3 + 3).
+   - Setelah itu, nilai total akan ditambah dengan 3. Jika sebelumnya total bernilai 3, maka setelah operasi 
+     ini, total akan menjadi 6 (3 + 3).
 
 6. Memperbarui UI dengan setState
 
- - setState() digunakan untuk memberitahu framework Flutter bahwa status dari widget telah berubah dan UI 
-   perlu diperbarui.
+   - setState() digunakan untuk memberitahu framework Flutter bahwa status dari widget telah berubah dan UI 
+     perlu diperbarui.
 
- - Di dalam setState(), nilai total diubah menjadi string (total.toString()) dan disimpan dalam variabel result.
+   - Di dalam setState(), nilai total diubah menjadi string (total.toString()) dan disimpan dalam variabel 
+     result.
 
- - Kemudian, nilai result ini akan digunakan untuk memperbarui tampilan UI (misalnya di Text(result) atau 
-   widget lain yang menampilkan hasil).
+   - Kemudian, nilai result ini akan digunakan untuk memperbarui tampilan UI (misalnya di Text(result) atau 
+     widget lain yang menampilkan hasil).
 
 
 *Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 4"*
+
 ![Screenshoot books](images/jawabansoal4.png)
 
