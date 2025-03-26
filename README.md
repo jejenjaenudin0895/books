@@ -3,8 +3,6 @@
 A new Flutter project.
 
 Praktikum 1: Mengunduh Data dari Web Service (API)
-Selesaikan langkah-langkah praktikum berikut ini menggunakan editor Visual Studio Code (VS Code) atau Android Studio atau code editor lain kesukaan Anda. Jawablah di laporan praktikum Anda pada setiap soal yang ada di beberapa langkah praktikum ini.
-
 
 ## Getting Started
 
@@ -24,6 +22,9 @@ substring adalah metode dalam Dart yang digunakan untuk mengambil sebagian dari 
 
 catchError adalah metode yang digunakan untuk menangani error atau pengecualian dalam alur eksekusi asinkron di Dart, khususnya dalam operasi yang melibatkan Future. Jika ada kesalahan saat menjalankan kode dalam Future, kita dapat menangani error tersebut dengan catchError.
 ![Screenshoot books](images/jawabansoal3.png)
+
+
+## **Praktikum 2: Menggunakan await/async untuk menghindari callbacks**
 
 ## *Soal 4*
 *Jelaskan maksud kode langkah 1 dan 2 tersebut!*
