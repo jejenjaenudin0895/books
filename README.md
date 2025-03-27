@@ -255,3 +255,17 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ![Screenshoot books](images/jawabansoal9.png)
 
+*Soal 10*
+Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!
+
+Berikut hasil pemanggilan method handleError() di ElevatedButton
+
+![Screenshoot books](images/jawabansoal10.png)
+
+**Perbedaan langkah 1**
+pada langkah tersebut menggunakan method Fungsi returnError()
+returnError() adalah fungsi yang melemparkan error tanpa penanganan di dalamnya, sedangkan
+
+**Perbedaan langkah 4**
+pada langkah tersebut menggunakan Fungsi handleError()
+handleError() adalah fungsi yang menangani error menggunakan blok try-catch dan memastikan bahwa beberapa kode (finally) tetap dijalankan setelah operasi selesai.

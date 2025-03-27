@@ -50,24 +50,27 @@ class _FuturePageState extends State<FuturePage> {
             const Spacer(),
             const Spacer(),
             ElevatedButton(
+              child: const Text('Go!'),
              onPressed: () {
-              returnError()
-                .then((value) {
-                    setState(() {
-                        result = 'Success';  // Menampilkan pesan sukses
-                          });
-                        })
-                .catchError((onError) {
+               handleError()
+
+               //returnError()
+                   .then((value) {
                  setState(() {
-                      result = onError.toString();  // Menampilkan pesan error
+                   result = 'Success'; // Menampilkan pesan sukses
                  });
-                    })
-                    .whenComplete(() {
-                 print("Complete");  // Menampilkan pesan "Complete" setelah selesai
-           });
-
-
-
+               })
+                   .catchError((onError) {
+                 setState(() {
+                   result = onError.toString(); // Menampilkan pesan error
+                 });
+               })
+                   .whenComplete(() {
+                 print(
+                     "Complete"); // Menampilkan pesan "Complete" setelah selesai
+               });
+             },
+            ),
 
 
 
@@ -122,11 +125,13 @@ class _FuturePageState extends State<FuturePage> {
                   returnFG();
 
 
- */
+
               },
 
               child: const Text('Go!'),
             ),
+            */
+
             const Spacer(),
             const Spacer(),
             Text(result),
@@ -231,6 +236,21 @@ Future count() async{
     await Future.delayed(const Duration(seconds: 2));
     throw Exception('something terrible happened!');
 
+  }
+
+  Future handleError() async {
+    try {
+      await returnError();
+    }
+    catch (error){
+      setState(() {
+        result = error.toString();
+
+      });
+    }
+    finally {
+      print('Complete');
+    }
   }
 
 }
