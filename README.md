@@ -208,7 +208,44 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ![Screenshoot books](images/jawabansoal7.png)
 
+**Soal 8**
+Jelaskan maksud perbedaan kode langkah 1 dan 4!
+
+Perbedaan kode pada langkah ke-1 ialah kode tersebut menggunakan FuterGroup<int> dimna futergroup tersebut adalah bagian dari package async yang digunakan untuk mengelola beberapa Future secara paralel.
+  
+  **Kelebihan:**
+
+- FutureGroup memungkinkan penambahan Future secara dinamis jika jumlahnya tidak tetap dan jika ingin mengelola 
+  beberapa Future secara lebih fleksibel.
+
+- Pada penggunaan kode tersebut juga bisa menambahkan lebih banyak Future ke dalam grup bahkan setelah memulai  
+  eksekusi, membuatnya lebih dinamis dalam pengelolaannya.
+
+**Kekurangan:**
+
+- Memerlukan penggunaan package async dari pihak ketiga.
+
+- Kode cenderung lebih panjang dan membutuhkan langkah tambahan seperti menutup grup dengan close().
 
 
+Perbedaan kode pada langkah ke-4 ialah kode tersebut menggunakan Future.wait(): dimana Future.wait() adalah metode built-in dalam Dart yang digunakan untuk menjalankan beberapa Future secara paralel dan menunggu semua Future tersebut selesai.
+
+**Kelebihan**
+
+    - Lebih sederhana dan mudah dibaca karena menggunakan metode Dart standar.
+
+    - Tidak memerlukan library tambahan selain yang sudah tersedia di Dart SDK.
+
+    - Memungkinkan pengelolaan beberapa Future dalam satu baris kode tanpa perlu menambahkan close() atau 
+      proses lain.
+
+
+**Kekurangan**
+
+    - Tidak fleksibel dalam hal menambah Future secara dinamis setelah eksekusi dimulai. Semua Future harus 
+      ditentukan sebelumnya dalam list.
+
+    - Jika ada Future yang gagal, semuanya akan gagal. Tidak ada penanganan error per Future, kecuali kita 
+      menggunakan catchError atau try-catch.
 
 
