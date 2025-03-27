@@ -202,6 +202,13 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 
 ## **Praktikum 4: Memanggil Future secara paralel**
 
+**Soal 7**
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 7".
+
+![Screenshoot books](images/jawabansoal7.png)
+
+
 
 
 
