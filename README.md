@@ -269,3 +269,28 @@ returnError() adalah fungsi yang melemparkan error tanpa penanganan di dalamnya,
 **Perbedaan langkah 4**
 pada langkah tersebut menggunakan Fungsi handleError()
 handleError() adalah fungsi yang menangani error menggunakan blok try-catch dan memastikan bahwa beberapa kode (finally) tetap dijalankan setelah operasi selesai.
+
+
+**Soal 11**
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+![Screenshoot books](images/jawabansoal11.png)
+
+Soal 12
+- Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada 
+  method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+jawaban :
+
+Tampilan atau animasi loading sudah terlihat 
+
+- Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+jawaban :
+
+Di browser, meskipun perangkat fisik memiliki GPS, aplikasi yang berjalan di browser hanya dapat mengakses lokasi berdasarkan teknologi yang digunakan oleh browser (misalnya triangulasi Wi-Fi atau alamat IP), yang biasanya tidak setepat GPS perangkat.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan 
+  "W5: Soal 12".
+
+berikut hasil screenshoot setelah menambahkan animasi
+![Screenshoot books](images/jawabansoal12.png)
+
