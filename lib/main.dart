@@ -176,6 +176,13 @@ Future count() async{
   }
 
   void returnFG(){
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+    /*
+    //praktekum 4 lahkah 1
       FutureGroup<int> futureGroup = FutureGroup<int>();
       futureGroup.add(returnOneAsync());
       futureGroup.add(returnTwoAsync());
@@ -191,5 +198,11 @@ Future count() async{
           result = total.toString();
         });
       });
+
+     */
   }
+
+
+
+
 }
