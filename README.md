@@ -248,4 +248,10 @@ Perbedaan kode pada langkah ke-4 ialah kode tersebut menggunakan Future.wait(): 
     - Jika ada Future yang gagal, semuanya akan gagal. Tidak ada penanganan error per Future, kecuali kita 
       menggunakan catchError atau try-catch.
 
+## **Praktikum 5: Menangani Respon Error pada Async Code**
+
+**Soal 9**
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 9".
+
+![Screenshoot books](images/jawabansoal9.png)
 

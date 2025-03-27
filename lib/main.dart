@@ -50,6 +50,28 @@ class _FuturePageState extends State<FuturePage> {
             const Spacer(),
             const Spacer(),
             ElevatedButton(
+             onPressed: () {
+              returnError()
+                .then((value) {
+                    setState(() {
+                        result = 'Success';  // Menampilkan pesan sukses
+                          });
+                        })
+                .catchError((onError) {
+                 setState(() {
+                      result = onError.toString();  // Menampilkan pesan error
+                 });
+                    })
+                    .whenComplete(() {
+                 print("Complete");  // Menampilkan pesan "Complete" setelah selesai
+           });
+
+
+
+
+
+
+              /*
               child: const Text('Go!'),
               onPressed: () {
 /*
@@ -100,8 +122,10 @@ class _FuturePageState extends State<FuturePage> {
                   returnFG();
 
 
-
+ */
               },
+
+              child: const Text('Go!'),
             ),
             const Spacer(),
             const Spacer(),
@@ -203,6 +227,10 @@ Future count() async{
   }
 
 
+    Future returnError() async{
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('something terrible happened!');
 
+  }
 
 }
