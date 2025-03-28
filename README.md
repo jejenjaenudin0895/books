@@ -340,3 +340,30 @@ Berikut hasil screenshoot soal 13
 
 ![Screenshoot books](images/jawabansoal13.png)
 
+**Soal 14**
+Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 14".
+
+![Screenshoot books](images/jawabansoal14.png)
+
+**Soal 15**
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda. (**done**)
+Silakan ganti dengan warna tema favorit Anda. (**done**)
+
+berikut hasil screenshoot soal 15
+
+![Screenshoot books](images/jawabansoal15.png)
+
+**Soal 16**
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+ Ketika tombol "Change Color" ditekan, aplikasi akan mengarahkan ke NavigationSecond menggunakan Navigator.push(). Setelah warna dipilih, warna tersebut akan dikembalikan ke layar pertama menggunakan Navigator.pop(), dan layar pertama akan diperbarui dengan warna baru yang dipilih.
+
+
+- Gantilah 3 warna pada langkah 5 dengan warna favorit Anda! (**done**)
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. 
+  Lalu lakukan commit dengan pesan "W5: Soal 16".
+
+berikut hasil screenshoot soal 16
+
+  ![Screenshoot books](images/jawabansoal16.png)
