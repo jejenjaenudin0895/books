@@ -1,11 +1,11 @@
 import 'dart:async';
+import 'package:books/navigation_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
-import 'package:async/async.dart';
-
 import 'geolocation.dart';
-
+import 'navigation_first.dart';
+//import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       //home: const FuturePage(),
-      home: LocationScreen(),
+     // home: LocationScreen(),
+     // home: const NavigationFirst(),
+      home: const NavigationDialog(),
     );
   }
 }
@@ -60,18 +62,20 @@ class _FuturePageState extends State<FuturePage> {
                //returnError()
                    .then((value) {
                  setState(() {
-                   result = 'Success'; // Menampilkan pesan sukses
+                   result = 'Success';
                  });
                })
                    .catchError((onError) {
                  setState(() {
-                   result = onError.toString(); // Menampilkan pesan error
+                   result = onError.toString();
                  });
                })
+
                    .whenComplete(() {
-                 print(
-                     "Complete"); // Menampilkan pesan "Complete" setelah selesai
+                 //print(
+                   //  "Complete");
                });
+
              },
             ),
 
@@ -208,7 +212,7 @@ Future count() async{
   }
 
   void returnFG(){
-    final futures = Future.wait<int>([
+    final _ = Future.wait<int>([
       returnOneAsync(),
       returnTwoAsync(),
       returnThreeAsync(),
@@ -252,7 +256,7 @@ Future count() async{
       });
     }
     finally {
-      print('Complete');
+      //print('Complete');
     }
   }
 
