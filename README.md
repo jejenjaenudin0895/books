@@ -12,7 +12,7 @@ Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan A
 ![Screenshoot books](images/titlejejen.png)
 ![Screenshoot books](images/soal2.png)
 ## *Jawaban soal 2*
-![Screenshoot books](images/jawabansoal2.png)
+![Screenshoot books](images/jawabansoal2a.png)
 ## *Soal 3*
 Jelaskan maksud kode langkah 5 tersebut terkait substring dan catchError!
 Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 3".
@@ -367,3 +367,17 @@ berikut hasil screenshoot soal 15
 berikut hasil screenshoot soal 16
 
   ![Screenshoot books](images/jawabansoal16.png)
+
+**Soal 17**
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?
+
+karna ada fungsi dari Navigator.pop(context, color) menutup dialog dan mengembalikan hasil warna (color) yang dipilih pengguna ke layar sebelumnya (yakni layar utama).
+
+- Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!
+
+![Screenshoot books](images/jawabansoal17a.png)
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. 
+  Lalu lakukan commit dengan pesan "W5: Soal 17".
+
+![Screenshoot books](images/jawabansoal17.png)
