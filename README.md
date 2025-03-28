@@ -276,7 +276,7 @@ Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerja
 
 ![Screenshoot books](images/jawabansoal11.png)
 
-Soal 12
+**Soal 12**
 - Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada 
   method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
 jawaban :
@@ -292,5 +292,51 @@ Di browser, meskipun perangkat fisik memiliki GPS, aplikasi yang berjalan di bro
   "W5: Soal 12".
 
 berikut hasil screenshoot setelah menambahkan animasi
+
 ![Screenshoot books](images/jawabansoal12.png)
+
+
+##**Praktikum 7: Manajemen Future dengan FutureBuilder**
+
+Soal 13
+Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+
+**Perbedaan Utama:**
+1. Cara Penanganan Data:
+
+    - Perbedaan praktekum 7 pada langkah ke 4 ini => menggunakan FutureBuilder, yang secara otomatis mengelola 
+      status Future dan menangani berbagai kondisi seperti menunggu, selesai, atau error.
+
+    - Selanjutnya praktekum 6 pada langkah ke 8 yaitu pengelola status sendiri dengan memeriksa apakah 
+      myPosition kosong dan menampilkan indikator loading atau hasil secara manual.
+
+2. Pemeliharaan dan Keterbacaan:
+
+    - Perbedaan praktekum 7 pada langkah ke 4 ini => FutureBuilder lebih mudah untuk menangani data yang 
+      bersifat Future, dan lebih jelas dalam hal pemisahan status (menunggu, selesai).
+
+    - Selanjutnya praktekum 6 pada langkah ke 8 yaitu manual dengan myPosition.isEmpty lebih 
+      mengandalkan setState() untuk memanipulasi UI dan bisa lebih rumit jika banyak kondisi atau logika tambahan diperlukan.
+
+3. Kebergantungan pada setState():
+
+    - Perbedaan praktekum 7 pada langkah ke 4 ini => (FutureBuilder) tidak memerlukan setState() secara 
+      eksplisit karena secara otomatis meng-update UI ketika status dari Future berubah.
+
+    - Selanjutnya praktekum 6 pada langkah ke 8 yaitu memerlukan setState() untuk mengupdate UI setelah data 
+      diterima.
+
+4. Penggunaan ConnectionState:
+
+    - Perbedaan praktekum 7 pada langkah ke 4 ini => status dari Future dikelola menggunakan ConnectionState.
+      waiting, ConnectionState.done, dan snapshot.error untuk mengontrol tampilan widget.
+
+    - Selanjutnya praktekum 6 pada langkah ke 8 yaitu memeriksa kondisi lokal (myPosition.isEmpty) untuk 
+      menentukan tampilan UI.
+
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W5: Soal 13".
+
+Berikut hasil screenshoot soal 13
+
+![Screenshoot books](images/jawabansoal13.png)
 
